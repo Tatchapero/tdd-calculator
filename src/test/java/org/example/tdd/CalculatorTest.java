@@ -20,44 +20,51 @@ class CalculatorTest {
     @DisplayName("Add two integers")
     public void test1() {
         // Arrange
-
+        int expected = 12;
 
         // Act
-        calculator.add(4, 8);
+        int actual = calculator.add(4, 8);
 
         // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     @DisplayName("Subtract two integers")
     public void test2() {
         // Arrange
+        int expected = -4;
 
         // Act
-        calculator.subtract(4, 8);
+        int actual = calculator.subtract(4, 8);
 
         // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     @DisplayName("Multiply two integers")
     public void test3() {
         // Arrange
+        int expected = 32;
 
         // Act
-        calculator.multiply(4, 8);
+        int actual = calculator.multiply(4, 8);
 
         // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     @DisplayName("Divide two integers")
     public void test4() {
         // Arrange
+        double expected = 0.5;
 
         // Act
-        calculator.divide(4, 8);
+        double actual = calculator.divide(4, 8);
 
         // Assert
+        assertEquals(expected, actual);
     }
 }
