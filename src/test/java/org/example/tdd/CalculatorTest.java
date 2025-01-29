@@ -67,4 +67,30 @@ class CalculatorTest {
         // Assert
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("Add three string numbers")
+    public void test5() {
+        // Arrange
+        int expected = 6;
+
+        // Act
+        int actual = calculator.add("1,2,3");
+
+        // Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("Add array items")
+    public void test6() {
+        // Arrange
+        int expected = 6;
+
+        // Act
+        int actual = calculator.add(new int[] { 1, 2, 3 });
+
+        // Assert
+        assertEquals(expected, actual);
+    }
 }

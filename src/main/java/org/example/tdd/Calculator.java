@@ -16,4 +16,29 @@ public class Calculator {
     public double divide(int a, int b) {
         return (double) a / b;
     }
+
+    public int add(String numbers) {
+        int result = 0;
+
+        for (String number : numbers.split(",")) {
+            try {
+                result += Integer.parseInt(number);
+            }
+            catch(Exception e) {
+                System.out.println("Could not parse '" + number + "' to an integer.");
+            }
+        }
+
+        return result;
+    }
+
+    public int add(int[] numbers) {
+        int result = 0;
+
+        for (int number : numbers) {
+            result += number;
+        }
+
+        return result;
+    }
 }
